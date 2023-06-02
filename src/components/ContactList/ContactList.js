@@ -53,7 +53,7 @@ export const ContactList = () => {
               <span>{contact.phone}</span>
 
               <Btn type="button" onClick={() => onDeleteContact(contact.id)}>
-                Delete
+                Delete!
               </Btn>
             </ItemWrapper>
           </Item>
