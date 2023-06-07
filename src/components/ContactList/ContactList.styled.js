@@ -3,7 +3,6 @@ export const ContactContainer = styled.div`
   padding: 15px;
   width: 500px;
   margin-bottom: 15px;
-  background-color: #ffefd5;
 `;
 export const List = styled.ul`
   list-style: none;

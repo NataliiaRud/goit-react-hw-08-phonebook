@@ -6,8 +6,8 @@ import {
   getContacts,
   getError,
   getIsLoading,
-} from 'redux/selectors';
-import { fetchContacts, deleteContact } from 'redux/operations';
+} from 'redux/Contacts/selectors';
+import { fetchContacts, deleteContact } from 'redux/Contacts/operations';
 import { useSelector, useDispatch } from 'react-redux';
 
 import {
@@ -50,10 +50,10 @@ export const ContactList = () => {
           <Item key={contact.id}>
             <ItemWrapper>
               <span>{contact.name}: </span>
-              <span>{contact.phone}</span>
+              <span>{contact.number}</span>
 
               <Btn type="button" onClick={() => onDeleteContact(contact.id)}>
-                Delete!
+                Delete
               </Btn>
             </ItemWrapper>
           </Item>

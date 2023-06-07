@@ -10,7 +10,6 @@ export const Form = styled(FormikForm)`
   max-width: 100%;
   width: 500px;
   padding: 15px;
-  background-color: #ffefd5;
 `;
 export const FormField = styled.label`
   display: flex;
