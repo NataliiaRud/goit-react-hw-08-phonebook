@@ -6,11 +6,12 @@ import { ContactForm } from 'components/ContactForm/ContactForm';
 import { fetchContacts } from 'redux/Contacts/operations';
 import { getIsLoading } from 'redux/Contacts/selectors';
 import { Filter } from 'components/Filter/Filter';
+import { getContacts } from 'redux/Contacts/selectors';
 
 export default function Contacts() {
   const dispatch = useDispatch();
   const isLoading = useSelector(getIsLoading);
-
+  const contacts = useSelector(getContacts);
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
@@ -21,7 +22,8 @@ export default function Contacts() {
 
       <ContactForm />
       <div>{isLoading && 'Request in progress...'}</div>
-      <Filter />
+      {contacts.length < 1 ? <p>No contacts found</p> : <Filter />}
+
       <ContactList />
     </>
   );

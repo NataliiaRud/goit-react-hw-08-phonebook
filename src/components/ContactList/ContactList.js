@@ -41,7 +41,7 @@ export const ContactList = () => {
     <ContactContainer>
       {isLoading && <Loader />}
       {!renderContacts?.length && !error && !isLoading && (
-        <p>No contacts found</p>
+        <p>Add your first contact</p>
       )}
 
       {error && <p>{error}</p>}

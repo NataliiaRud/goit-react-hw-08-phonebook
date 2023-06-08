@@ -33,13 +33,13 @@ export const App = () => {
         <Route
           path="/register"
           element={
-            <RestrictedRoute redirectTo="/tasks" component={<Register />} />
+            <RestrictedRoute redirectTo="/contacts" component={<Register />} />
           }
         />
         <Route
           path="/login"
           element={
-            <RestrictedRoute redirectTo="/tasks" component={<Login />} />
+            <RestrictedRoute redirectTo="/contacts" component={<Login />} />
           }
         />
         <Route
