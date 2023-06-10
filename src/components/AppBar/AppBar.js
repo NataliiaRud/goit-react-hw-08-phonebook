@@ -2,18 +2,20 @@ import { useAuth } from 'hooks/useAuth';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import { AuthNav } from 'components/AuthNav/AuthNav';
 import { Navigation } from 'components/Navigation/Navigation';
-import { Container, List } from './AppBar.styled';
+import { Box, Flex } from '@chakra-ui/react';
 
 const AppBar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <Container>
-      <List>
-        <Navigation />
-        {isLoggedIn ? <UserMenu /> : <AuthNav />}
-      </List>
-    </Container>
+    <header>
+      <Box p="25px" position="relative" background="blue.200">
+        <Flex align="center" justify="space-between" gap="150px">
+          <Navigation />
+          {isLoggedIn ? <UserMenu /> : <AuthNav />}
+        </Flex>
+      </Box>
+    </header>
   );
 };
 

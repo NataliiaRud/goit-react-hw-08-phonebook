@@ -1,6 +1,16 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
-import { Form, Label } from './LoginForm.styled';
+import { MdOutlineMarkunread, MdOutlineVisibilityOff } from 'react-icons/md';
+import {
+  Box,
+  Flex,
+  Input,
+  Button,
+  FormLabel,
+  Icon,
+  InputLeftElement,
+  InputGroup,
+} from '@chakra-ui/react';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -18,16 +28,35 @@ export const LoginForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} autoComplete="off">
-      <Label>
-        Email
-        <input type="email" name="email" />
-      </Label>
-      <Label>
-        Password
-        <input type="password" name="password" />
-      </Label>
-      <button type="submit">Log In</button>
-    </Form>
+    <form onSubmit={handleSubmit} autoComplete="off">
+      <Box boxSize="sm" mr="auto" ml="auto">
+        <Flex
+          align="left"
+          justify="center"
+          gap="15px"
+          direction="column"
+          maxW="300px"
+          m="0 auto"
+        >
+          <FormLabel>Email</FormLabel>
+          <InputGroup>
+            <Input type="email" name="email" variant="filled" />
+            <InputLeftElement pointerEvents="none">
+              <Icon as={MdOutlineMarkunread} w={5} h={5} color="blue.200" />
+            </InputLeftElement>
+          </InputGroup>
+          <FormLabel>Password</FormLabel>
+          <InputGroup>
+            <Input type="password" name="password" variant="filled" />
+            <InputLeftElement pointerEvents="none">
+              <Icon as={MdOutlineVisibilityOff} w={5} h={5} color="blue.200" />
+            </InputLeftElement>
+          </InputGroup>
+          <Button type="submit" w="100%">
+            Log In
+          </Button>
+        </Flex>
+      </Box>
+    </form>
   );
 };

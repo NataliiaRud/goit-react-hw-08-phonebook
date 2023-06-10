@@ -3,8 +3,20 @@ import { nanoid } from 'nanoid';
 import { getContacts } from 'redux/Contacts/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
-import { FormField, Field, Form, Button } from './ContactForm.styled';
+import { Field, Form } from './ContactForm.styled';
 import { addContact } from 'redux/Contacts/operations';
+import { MdOutlineMarkunread } from 'react-icons/md';
+import {
+  Box,
+  Button,
+  Flex,
+  FormLabel,
+  Icon,
+  Input,
+  InputLeftElement,
+  InputLeftAddon,
+  InputGroup,
+} from '@chakra-ui/react';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -31,27 +43,48 @@ export const ContactForm = () => {
         }}
       >
         <Form>
-          <FormField htmlFor="name">Name</FormField>
+          <Box boxSize="sm" mr="auto" ml="auto">
+            <Flex
+              align="left"
+              justify="center"
+              gap="4px"
+              direction="column"
+              maxW="300px"
+              h="250px"
+            >
+              <FormLabel htmlFor="name">Name</FormLabel>
+              <InputGroup>
+                <Field
+                  type="text"
+                  name="name"
+                  placeholder="enter name"
+                  pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                  title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+                  required
+                />
+              </InputGroup>
 
-          <Field
-            type="text"
-            name="name"
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-          />
-
-          <FormField htmlFor="number">Number</FormField>
-
-          <Field
-            type="tel"
-            name="number"
-            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            required
-          />
-
-          <Button type="submit">Add contact</Button>
+              <FormLabel htmlFor="number">Phone</FormLabel>
+              <InputGroup>
+                {/* <InputLeftAddon children="+380" /> */}
+                {/* <Input type="tel" placeholder="phone number" /> */}
+                <Field
+                  type="tel"
+                  name="number"
+                  placeholder="enter number"
+                  pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+                  title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+                  required
+                />
+                {/* <InputLeftElement pointerEvents="none">
+                  <Icon as={MdOutlineMarkunread} w={5} h={5} color="blue.200" />
+                </InputLeftElement> */}
+              </InputGroup>
+              <Button type="submit" w="100%">
+                Add contact
+              </Button>
+            </Flex>
+          </Box>
         </Form>
       </Formik>
     </>

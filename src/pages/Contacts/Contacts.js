@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Box, Text } from '@chakra-ui/react';
 
 import { ContactList } from 'components/ContactList/ContactList';
 import { ContactForm } from 'components/ContactForm/ContactForm';
@@ -17,14 +18,22 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <>
-      <h1>ContactList</h1>
+    <Box w="100%" p="15px">
+      <Text
+        textAlign="center"
+        fontSize="2xl"
+        fontWeight="bold"
+        color="teal"
+        mb="15px"
+      >
+        Contact List
+      </Text>
 
       <ContactForm />
       <div>{isLoading && 'Request in progress...'}</div>
-      {contacts.length < 1 ? <p>No contacts found</p> : <Filter />}
+      {contacts.length < 1 ? <p></p> : <Filter />}
 
       <ContactList />
-    </>
+    </Box>
   );
 }

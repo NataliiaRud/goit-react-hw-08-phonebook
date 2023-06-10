@@ -16,6 +16,7 @@ import {
   Item,
   ItemWrapper,
   Btn,
+  Title
 } from './ContactList.styled';
 
 export const ContactList = () => {
@@ -41,7 +42,7 @@ export const ContactList = () => {
     <ContactContainer>
       {isLoading && <Loader />}
       {!renderContacts?.length && !error && !isLoading && (
-        <p>Add your first contact</p>
+        <Title>Add your first contact</Title>
       )}
 
       {error && <p>{error}</p>}

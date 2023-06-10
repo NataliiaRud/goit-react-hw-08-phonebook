@@ -5,24 +5,19 @@ import { Form as FormikForm, Field as FormikField } from 'formik';
 export const Form = styled(FormikForm)`
   display: flex;
   flex-direction: column;
-
-  gap: 12px;
+  align-items: left;
+  justify-content: center;
+  gap: 4px;
   max-width: 100%;
-  width: 500px;
   padding: 15px;
+  margin: 0 auto;
 `;
-export const FormField = styled.label`
-  display: flex;
-  flex-direction: column;
-  font-size: 18px;
-  font-weight: 400;
-`;
-
 export const Field = styled(FormikField)`
-  margin-bottom: 24px;
-  width: 400px;
-`;
-export const Button = styled.button`
-  width: 100px;
-  color: red;
+  margin-bottom: 14px;
+  width: 300px;
+  height: 40px;
+  background color: blue;
+border-radius: 5px;
+background-color: #EDF2F7;
+padding: 8px;
 `;
