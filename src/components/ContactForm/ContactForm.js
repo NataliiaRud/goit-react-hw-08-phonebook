@@ -5,18 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
 import { Field, Form } from './ContactForm.styled';
 import { addContact } from 'redux/Contacts/operations';
-import { MdOutlineMarkunread } from 'react-icons/md';
-import {
-  Box,
-  Button,
-  Flex,
-  FormLabel,
-  Icon,
-  Input,
-  InputLeftElement,
-  InputLeftAddon,
-  InputGroup,
-} from '@chakra-ui/react';
+
+import { Box, Button, Flex, FormLabel, InputGroup } from '@chakra-ui/react';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
