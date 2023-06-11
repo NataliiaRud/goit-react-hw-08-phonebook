@@ -3,7 +3,7 @@ import { register } from 'redux/auth/operations';
 import {
   MdPersonAddAlt,
   MdOutlineMarkunread,
-  MdOutlineVisibilityOff,
+  MdLockOutline,
 } from 'react-icons/md';
 import {
   Box,
@@ -41,7 +41,6 @@ export const RegisterForm = () => {
           direction="column"
           maxW="300px"
           m="0 auto"
-          
         >
           <FormLabel>Username</FormLabel>
           <InputGroup>
@@ -61,7 +60,7 @@ export const RegisterForm = () => {
           <InputGroup>
             <Input type="password" name="password" variant="filled" />
             <InputLeftElement pointerEvents="none">
-              <Icon as={MdOutlineVisibilityOff} w={5} h={5} color="blue.200" />
+              <Icon as={MdLockOutline} w={5} h={5} color="blue.200" />
             </InputLeftElement>
           </InputGroup>
           <Button type="submit" w="100%">

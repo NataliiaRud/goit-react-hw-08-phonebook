@@ -33,7 +33,7 @@ export const ContactForm = () => {
         }}
       >
         <Form>
-          <Box boxSize="sm" mr="auto" ml="auto">
+          <Box mr="auto" ml="auto">
             <Flex
               align="left"
               justify="center"

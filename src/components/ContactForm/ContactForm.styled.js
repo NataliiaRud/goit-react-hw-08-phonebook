@@ -10,7 +10,6 @@ export const Form = styled(FormikForm)`
   gap: 4px;
   max-width: 100%;
   padding: 15px;
-  margin: 0 auto;
 `;
 export const Field = styled(FormikField)`
   margin-bottom: 14px;

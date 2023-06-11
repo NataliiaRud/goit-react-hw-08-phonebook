@@ -6,3 +6,18 @@ export const Wrap = styled.div`
   align-items: center;
   gap: 20px;
 `;
+export const Button = styled.button`
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
+  color: grey;
+  &.active {
+    color: blue;
+  }
+`;
+
+export const Title = styled.p`
+  font-weight: 700;
+  color: grey;
+`;

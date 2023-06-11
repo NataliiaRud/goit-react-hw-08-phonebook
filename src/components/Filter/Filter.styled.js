@@ -8,18 +8,18 @@ export const Wraper = styled.div`
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  gap: 4px;
-
+  gap: 15px;
   padding: 15px;
 `;
 export const Title = styled.p`
   color: teal;
   text-align: center;
-  font-weight: 600px;
+  font-weight: bold;
   margin-bottom: 15px;
 `;
 export const FilterInput = styled.input`
- margin-left: 25%;
+margin-left: auto;
+    margin-right: auto;
  margin-bottom: 14px;
   width: 300px;
   height: 40px;
@@ -27,5 +27,5 @@ export const FilterInput = styled.input`
 border-radius: 5px;
 background-color: #EDF2F7;
 padding: 8px;
- align-items: center;
+border: grey;
 `;

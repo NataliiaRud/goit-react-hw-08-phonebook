@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
-import { MdOutlineMarkunread, MdOutlineVisibilityOff } from 'react-icons/md';
+import { MdOutlineMarkunread, MdLockOutline } from 'react-icons/md';
 import {
   Box,
   Flex,
@@ -49,7 +49,7 @@ export const LoginForm = () => {
           <InputGroup>
             <Input type="password" name="password" variant="filled" />
             <InputLeftElement pointerEvents="none">
-              <Icon as={MdOutlineVisibilityOff} w={5} h={5} color="blue.200" />
+              <Icon as={MdLockOutline} w={5} h={5} color="blue.200" />
             </InputLeftElement>
           </InputGroup>
           <Button type="submit" w="100%">

@@ -8,7 +8,7 @@ export const ContactContainer = styled.div`
 export const Title = styled.p`
   color: teal;
   text-align: center;
-  font-weight: 600px;
+  font-weight: bold;
   margin-bottom: 15px;
 `;
 
@@ -20,6 +20,8 @@ export const List = styled.ul`
   justify-content: center;
 `;
 export const Item = styled.li`
+  margin-left: auto;
+  margin-right: auto;
   padding: 8px;
   background-color: #edf2f7;
   width: 600px;
