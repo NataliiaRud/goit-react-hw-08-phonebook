@@ -56,8 +56,7 @@ export const ContactForm = () => {
 
               <FormLabel htmlFor="number">Phone</FormLabel>
               <InputGroup>
-                {/* <InputLeftAddon children="+380" /> */}
-                {/* <Input type="tel" placeholder="phone number" /> */}
+              
                 <Field
                   type="tel"
                   name="number"
@@ -66,9 +65,7 @@ export const ContactForm = () => {
                   title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                   required
                 />
-                {/* <InputLeftElement pointerEvents="none">
-                  <Icon as={MdOutlineMarkunread} w={5} h={5} color="blue.200" />
-                </InputLeftElement> */}
+               
               </InputGroup>
               <Button type="submit" w="100%">
                 Add contact

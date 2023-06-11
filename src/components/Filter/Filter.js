@@ -11,6 +11,7 @@ export const Filter = () => {
     <FilterContainer>
       <Wraper>
         <Title>Find contacts by name</Title>
+
         <FilterInput
           type="text"
           value={filter}
